@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Test1.MainPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#532c5d">
+
+    <Grid>
+        <StackLayout Margin="20">
+            <Image Source="onlinecourse.png" HeightRequest="60" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+            <StackLayout Margin="20">
+                <Label Style="{StaticResource welcome}" FontSize="42" Text="Sign In" HorizontalOptions="Center" VerticalOptions="Start"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Margin="40"></Label>
+            </StackLayout>
+            <StackLayout>
+                <Label FontFamily="OpenSansRegular" TextColor="{StaticResource SecondaryColor}" 
+                       FontSize="16" Text="Username"/>
+                <Grid Margin="0,5">
+                    <Frame Opacity="0.3" BackgroundColor="#28142D" CornerRadius="5"/>
+                    <Entry BackgroundColor="Transparent" Placeholder="Enter username" 
+                           TextColor="White" Margin="5,0"
+                           PlaceholderColor="Gray" />
+
+                </Grid>
+
+                <Label FontFamily="OpenSansRegular" TextColor="{StaticResource SecondaryColor}" 
+                       FontSize="16" Text="Password"/>
+                <Grid Margin="0,5">
+                    <Frame Opacity="0.3" BackgroundColor="#28142D" CornerRadius="5"/>
+                    <Entry BackgroundColor="Transparent" Placeholder="Enter password" 
+                           TextColor="White" Margin="5,0"
+                           PlaceholderColor="Gray" IsPassword="True"/>
+
+                </Grid>
+            </StackLayout>
+
+            <Button Margin="0,15" BackgroundColor="#28142D"
+                    Text="Sign in" TextColor="White" FontFamily="OpenSansBold"/>
+
+            <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal">
+
+                <Label FontFamily="OpenSansRegular" TextColor="{StaticResource SecondaryColor}" 
+                       FontSize="16" Text="Forgot Password?" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" 
+                       />
+                <Label FontFamily="OpenSansRegular" TextColor="{StaticResource SecondaryColor}" 
+                       FontSize="16" Text="Register"  VerticalOptions="EndAndExpand" 
+                       HorizontalOptions="EndAndExpand" 
+                       />
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
