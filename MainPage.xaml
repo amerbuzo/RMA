@@ -10,7 +10,7 @@
             <Image Source="onlinecourse.png" HeightRequest="100" VerticalOptions="Center" HorizontalOptions="Center"/>
 
             <StackLayout Margin="30">
-                <Label Style="{StaticResource welcome}" FontSize="42" Text="Courses App" HorizontalOptions="Center" VerticalOptions="Start"/>
+                <Label Style="{StaticResource welcome}" FontSize="40" Text="Courses App" HorizontalOptions="Center" VerticalOptions="Start"/>
             </StackLayout>
             <StackLayout>
                 <Label Margin="40"></Label>
