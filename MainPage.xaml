@@ -3,42 +3,42 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Test1.MainPage"
              Shell.NavBarIsVisible="False"
-             BackgroundColor="#532c5d">
+             BackgroundImageSource="pozadina.svg">
 
     <Grid>
-        <StackLayout Margin="20">
-            <Image Source="onlinecourse.png" HeightRequest="60" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <StackLayout Margin="25">
+            <Image Source="onlinecourse.png" HeightRequest="100" VerticalOptions="Center" HorizontalOptions="Center"/>
 
-            <StackLayout Margin="20">
-                <Label Style="{StaticResource welcome}" FontSize="42" Text="Sign In" HorizontalOptions="Center" VerticalOptions="Start"/>
+            <StackLayout Margin="30">
+                <Label Style="{StaticResource welcome}" FontSize="42" Text="Courses App" HorizontalOptions="Center" VerticalOptions="Start"/>
             </StackLayout>
             <StackLayout>
                 <Label Margin="40"></Label>
             </StackLayout>
             <StackLayout>
-                <Label FontFamily="OpenSansRegular" TextColor="{StaticResource SecondaryColor}" 
+                <Label FontFamily="OpenSansRegular" TextColor="Black" 
                        FontSize="16" Text="Username"/>
                 <Grid Margin="0,5">
-                    <Frame Opacity="0.3" BackgroundColor="#28142D" CornerRadius="5"/>
+                    <Frame Opacity="0.3" BackgroundColor="#91DFEE" BorderColor="Black" CornerRadius="5"/>
                     <Entry BackgroundColor="Transparent" Placeholder="Enter username" 
-                           TextColor="White" Margin="5,0"
+                           TextColor="White" Margin="5,0" FontFamily="OpenSansRegular"
                            PlaceholderColor="Gray" />
 
                 </Grid>
 
-                <Label FontFamily="OpenSansRegular" TextColor="{StaticResource SecondaryColor}" 
+                <Label FontFamily="OpenSansRegular" TextColor="Black" 
                        FontSize="16" Text="Password"/>
                 <Grid Margin="0,5">
-                    <Frame Opacity="0.3" BackgroundColor="#28142D" CornerRadius="5"/>
+                    <Frame Opacity="0.3" BackgroundColor="#91DFEE" BorderColor="Black" CornerRadius="5"/>
                     <Entry BackgroundColor="Transparent" Placeholder="Enter password" 
-                           TextColor="White" Margin="5,0"
+                           TextColor="White" Margin="5,0" FontFamily="OpenSansRegular"
                            PlaceholderColor="Gray" IsPassword="True"/>
 
                 </Grid>
             </StackLayout>
 
-            <Button Margin="0,15" BackgroundColor="#28142D"
-                    Text="Sign in" TextColor="White" FontFamily="OpenSansBold"/>
+            <Button Margin="0,15" BackgroundColor="#91DFEE" FontAttributes="Bold" BorderColor="Black" CornerRadius="5"
+                    Text="Sign in" TextColor="Black" FontFamily="OpenSansBold"/>
 
             <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal">
 
