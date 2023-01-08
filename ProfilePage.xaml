@@ -101,13 +101,13 @@
                                    HorizontalOptions="Start" 
                                    BorderColor="#a58e74">
                                 <Grid RowDefinitions="*,Auto">
-                                    <Image Source="folder" 
+                                    <Image Source="{Binding icon}" 
                                            HorizontalOptions="Center" 
                                            HeightRequest="40" 
                                            WidthRequest="40" />
                                     <Label Grid.Row="1" 
                                            HorizontalOptions="Center" 
-                                           Text="{Binding FileName}" 
+                                           Text="{Binding name}" 
                                            FontSize="11" 
                                            TextColor="#c6c1ea"/>
                                 </Grid>
