@@ -7,11 +7,11 @@
 
     <Grid>
 
-        <StackLayout Margin="25">
-            <Image Source="onlinecourse.png" HeightRequest="100" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <StackLayout Margin="20">
+            <Image Source="splashicon.SVG" HeightRequest="200" VerticalOptions="Center" HorizontalOptions="Center"/>
 
-            <StackLayout Margin="30">
-                <Label Style="{StaticResource welcome}" FontSize="40" Text="Courses App" HorizontalOptions="Center" VerticalOptions="End"/>
+            <StackLayout Margin="2">
+                <Label  FontFamily="OpenSansSemibold" FontSize="45" Text="Courseek" TextColor="#E09132" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="End"/>
             </StackLayout>
             <StackLayout>
                 <Label Margin="40"></Label>

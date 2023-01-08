@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Test1.ProfilePage"
+             Title="ProfilePage">
+    <ScrollView VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never">
+        <Label Text="Welcome to profile page!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" Padding="20,0">
+            <Frame Grid.Row="0" 
+                   BorderColor="White" 
+                   VerticalOptions="Start" 
+                   HeightRequest="160" 
+                   CornerRadius="20" 
+                   Margin="0,45,0,20" 
+                   Padding="0" 
+                   IsClippedToBounds="True">
+                <Image Source="timeline.jpg" Aspect="AspectFill"/>
+            </Frame>
+            <Frame Grid.Row="1" 
+                   Margin="0,-90,0,0" 
+                   BorderColor="White" 
+                   HorizontalOptions="Center" 
+                   WidthRequest="110" 
+                   CornerRadius="55" 
+                   Padding="0" 
+                   IsClippedToBounds="True">
+                <Image Source="profilepicture.jpg" Aspect="AspectFill"/>
+            </Frame>
+
+            <Label Grid.Row="2" 
+                   Text="username" 
+                   FontAttributes="Bold" 
+                   TextColor="#a58e74" 
+                   HorizontalTextAlignment="Center" 
+                   Margin="0,20,0,0" 
+                   FontSize="22"/>
+
+            <Grid Grid.Row="3" 
+                  ColumnDefinitions="Auto,Auto,Auto,Auto,Auto" 
+                  VerticalOptions="Center" 
+                  HorizontalOptions="Center" 
+                  Margin="0,20,0,0">
+
+                <Button Grid.Column="0" 
+                        ImageSource="email" 
+                        WidthRequest="20" 
+                        HeightRequest="20" 
+                        CornerRadius="7" 
+                        HorizontalOptions="Center" 
+                        BackgroundColor="#a58e74"/>
+
+                <Label Grid.Column="1" 
+                       Text="email " 
+                       FontSize="15" 
+                       TextColor="#a58e74"/>
+
+                <Button Grid.Column="2" 
+                        Text="Log out" 
+                        TextColor="#a58e74" 
+                        FontAttributes="Bold" 
+                        Margin="5,0,0,0" 
+                        CornerRadius="10" 
+                        FontSize="9" 
+                        BackgroundColor="White"/>
+            </Grid>
+
+            <Label Grid.Row="4" 
+                   Text="Notes" 
+                   FontAttributes="Bold" 
+                   TextColor="#424530" 
+                   HorizontalTextAlignment="Start" 
+                   Margin="0,40,0,20" 
+                   FontSize="20"/>
+
+            <Label Grid.Row="5" 
+                   TextColor="Black" 
+                   HorizontalTextAlignment="Start" 
+                   FontSize="15" 
+                   Text="Description"/>
+
+            <Label Grid.Row="6" 
+                   Text="Taken courses" 
+                   FontAttributes="Bold" 
+                   TextColor="#424530" 
+                   HorizontalTextAlignment="Start" 
+                   Margin="0,30,0,10" 
+                   FontSize="20"/>
+
+            <CollectionView Grid.Row="7" HorizontalScrollBarVisibility="Never"
+                            ItemsSource="{Binding cousres}" Margin="0,0,-10,0"
+                            HeightRequest="140"
+                            ItemsLayout="HorizontalList">
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout WidthRequest="160" 
+                                     Padding="0,0,15,0">
+                            <Frame CornerRadius="13" 
+                                   HorizontalOptions="Start" 
+                                   BorderColor="#a58e74">
+                                <Grid RowDefinitions="*,Auto">
+                                    <Image Source="folder" 
+                                           HorizontalOptions="Center" 
+                                           HeightRequest="40" 
+                                           WidthRequest="40" />
+                                    <Label Grid.Row="1" 
+                                           HorizontalOptions="Center" 
+                                           Text="{Binding FileName}" 
+                                           FontSize="11" 
+                                           TextColor="#c6c1ea"/>
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <BoxView Grid.Row="8" 
+                     HorizontalOptions="FillAndExpand" 
+                     HeightRequest="1"  
+                     Margin="-20,0,0,20" 
+                     Color="#eaeaf0"/>
+
+            <Grid ColumnDefinitions="Auto,*" 
+                  HorizontalOptions="FillAndExpand" 
+                  Grid.Row="9" 
+                  Margin="0,0,0,20">
+
+                <Button Grid.Column="0" 
+                        Text="Premium" 
+                        BackgroundColor="White" 
+                        ImageSource="medal" 
+                        WidthRequest="130" 
+                        CornerRadius="18" 
+                        FontAttributes="Bold" 
+                        TextColor="#a58e74" 
+                        BorderColor="Silver" 
+                        Margin="0,0,10,0" 
+                        HeightRequest="50" 
+                        BorderWidth="1"/>
+                <Button Grid.Column="1" 
+                        Text="Get Detail" 
+                        CornerRadius="18" 
+                        TextColor="White" 
+                        FontAttributes="Bold" 
+                        BackgroundColor="#424530" 
+                        HeightRequest="50" 
+                        BorderWidth="1"/>
+            </Grid>
+
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
