@@ -35,7 +35,7 @@
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\spicon.SVG" BaseSize="768,380" Color="#105A77"/>
+		<MauiSplashScreen Include="Resources\Splash\spicon.SVG" BaseSize="768,380" Color="#105A77" />
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
 		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
@@ -48,7 +48,23 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Remove="ProfilePage.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <None Remove="Resources\Images\onlinecourse.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="ProfilePage.xaml">
+	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+	  </EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="MainPage.xaml.cs">
+	    <DependentUpon>MainPage.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 </Project>
