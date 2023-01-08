@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
     public class Course
     {
         public string name { get; set; }
@@ -16,3 +15,4 @@ using System.Threading.Tasks;
 
         public string icon { get; set; }
     }
+}

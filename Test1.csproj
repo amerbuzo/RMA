@@ -35,7 +35,7 @@
 		<MauiIcon Include="Resources\AppIcon\ikona.SVG" ForegroundFile="Resources\AppIcon\ikona.SVG" Color="#FFEFCD" />
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splashicon.SVG" BaseSize="768,380" Color="#A58374" />
+		<MauiSplashScreen Include="Resources\Splash\splashicon.SVG"  BaseSize="768,380" Color="#A58374"/>
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
 		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
@@ -48,19 +48,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Remove="ProfilePage.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <None Remove="Resources\Images\onlinecourse.png" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Compile Update="ProfilePage.xaml.cs">
-	    <DependentUpon>ProfilePage.xaml</DependentUpon>
-	  </Compile>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <MauiXaml Update="ProfilePage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	</ItemGroup>
 
 </Project>

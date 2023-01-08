@@ -1,15 +1,21 @@
-namespace Test1;
 using Test1.Models;
-public partial class ProfilePage : ContentPage
+
+namespace Test1
 {
-    public List<Course> courses { get; set; }
-    public ProfilePage()
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class ProfilePage : ContentPage
     {
-        courses = new List<Course>
+        public List<Course> courses { get; set; }
+
+        public ProfilePage()
         {
+            courses = new List<Course>
+            {
                 new Course {name="Web Development", category="IT", description="", icon=""},
                 new Course {name="Web Development", category="IT", description="", icon=""}
             };
-        InitializeComponent();
-	}
+
+            InitializeComponent();
+        }
+    }
 }
