@@ -14,8 +14,6 @@ namespace Test1
                 new Course {name="Web Development", category="IT", description="", icon=""},
                 new Course {name="Web Development", category="IT", description="", icon=""}
             };
-
-            InitializeComponent();
         }
     }
 }

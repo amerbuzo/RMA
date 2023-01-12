@@ -15,4 +15,3 @@ using System.Threading.Tasks;
 
         public string icon { get; set; }
     }
-}
